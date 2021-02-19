@@ -1,0 +1,28 @@
+{
+  "name": "study-vainilla-javascript",
+  "version": "1.0.0",
+  "description": "study vainilla javascript",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx http-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/junghyeonsu/study-vainilla-javascript.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/junghyeonsu/study-vainilla-javascript/issues"
+  },
+  "homepage": "https://github.com/junghyeonsu/study-vainilla-javascript#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.12.17",
+    "@babel/core": "^7.12.17",
+    "@babel/preset-env": "^7.12.17"
+  },
+  "dependencies": {
+    "http-server": "^0.12.3"
+  }
+}

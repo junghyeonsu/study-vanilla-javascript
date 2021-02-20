@@ -1,12 +1,19 @@
-import Sample from "./Sample.js";
+import Title from "./components/Title.js";
+import TodoList from "./components/list/TodoList.js";
 
 export default class App {
-  $target = null;
-  dashboard = null;
-
   constructor($target) {
-    this.$target = $target;
+    let app = document.createElement("div");
+    app.style = `
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    `;
 
-    this.dashboard = new Sample($target);
+    new Title(app);
+    new TodoList(app);
+    $target.append(app);
   }
 }

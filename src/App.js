@@ -28,7 +28,7 @@ export const render = () => {
 
   switch (state) {
     case "Todo":
-      new Title(app);
+      new Title(app, "To do list");
       new Todo(app);
       break;
     default:

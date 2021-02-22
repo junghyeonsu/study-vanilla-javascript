@@ -5,6 +5,17 @@ export default class Item {
     const $item = document.createElement("div");
     $item.innerHTML = $text;
     $item.addEventListener("click", onClickItem);
+    $item.addEventListener("mouseover", () => {
+      $item.style = `
+            color: red;
+        `;
+    });
+    $item.addEventListener("mouseleave", () => {
+      $item.style = `
+            color: white;
+        `;
+    });
+
     $target.appendChild($item);
   }
 }

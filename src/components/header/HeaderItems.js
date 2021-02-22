@@ -9,6 +9,7 @@ export default class HeaderItems {
         width: 100%;
         justify-content: space-evenly;
         align-items: center;
+        color: white;
     `;
 
     new Item($container, "Todo");

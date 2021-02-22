@@ -2,11 +2,12 @@ import Title from "./components/Title.js";
 import Header from "./components/header/Header.js";
 import Todo from "./components/list/Todo.js";
 
+let state = "Todo";
+const app = document.createElement("div");
+
 export default class App {
-  state = "Todo";
-  app = document.createElement("div");
   constructor($target) {
-    this.app.style = `
+    app.style = `
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -14,15 +15,28 @@ export default class App {
       height: 100vh;
     `;
 
-    this.render();
-    $target.append(this.app);
+    render();
+    new Header(document.querySelector("#root"));
+    $target.append(app);
+  }
+}
+
+export const render = () => {
+  while (app.hasChildNodes()) {
+    app.removeChild(app.firstChild);
   }
 
-  render = () => {
-    console.log(this.state);
+  switch (state) {
+    case "Todo":
+      new Title(app);
+      new Todo(app);
+      break;
+    default:
+      app.innerHTML = "default";
+  }
+};
 
-    new Title(this.app);
-    new Header(document.querySelector("#root"));
-    new Todo(this.app);
-  };
-}
+export const setState = (_state) => {
+  state = _state;
+  render();
+};

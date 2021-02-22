@@ -1,4 +1,4 @@
-import { setState } from "../../App.js";
+import Item from "./Item.js";
 
 export default class HeaderItems {
   constructor($target) {
@@ -11,21 +11,8 @@ export default class HeaderItems {
         align-items: center;
     `;
 
-    const $todo = document.createElement("div");
-    $todo.innerHTML = "Todo";
-    $todo.addEventListener("click", onClickItem);
-
-    const $default = document.createElement("div");
-    $default.innerHTML = "Default";
-    $default.addEventListener("click", onClickItem);
-
-    $container.appendChild($todo);
-    $container.appendChild($default);
-
+    new Item($container, "Todo");
+    new Item($container, "Default");
     $target.appendChild($container);
   }
 }
-
-const onClickItem = (e) => {
-  setState(e.target.innerHTML);
-};

@@ -1,6 +1,7 @@
 import Title from "./components/Title.js";
 import Header from "./components/header/Header.js";
 import Todo from "./components/list/Todo.js";
+import CardContainer from "./components/grid_card/CardContainer.js";
 
 let state = "Todo";
 const app = document.createElement("div");
@@ -31,6 +32,12 @@ export const render = () => {
       new Title(app, "To do list");
       new Todo(app);
       break;
+
+    case "Grid Card":
+      new Title(app, "Grid Card");
+      new CardContainer(app);
+      break;
+
     default:
       app.innerHTML = "default";
   }

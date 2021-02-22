@@ -1,10 +1,12 @@
 import Title from "./components/Title.js";
-import TodoList from "./components/list/TodoList.js";
+import Header from "./components/header/Header.js";
+import Todo from "./components/list/Todo.js";
 
 export default class App {
+  state = "Todo";
+  app = document.createElement("div");
   constructor($target) {
-    let app = document.createElement("div");
-    app.style = `
+    this.app.style = `
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -12,8 +14,15 @@ export default class App {
       height: 100vh;
     `;
 
-    new Title(app);
-    new TodoList(app);
-    $target.append(app);
+    this.render();
+    $target.append(this.app);
   }
+
+  render = () => {
+    console.log(this.state);
+
+    new Title(this.app);
+    new Header(document.querySelector("#root"));
+    new Todo(this.app);
+  };
 }

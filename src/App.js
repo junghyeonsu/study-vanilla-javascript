@@ -2,9 +2,10 @@ import Title from "./components/Title.js";
 import Header from "./components/header/Header.js";
 import Todo from "./components/list/Todo.js";
 import CardContainer from "./components/grid_card/CardContainer.js";
+import Modal from "./components/modal/index.js";
 
 let state = "Todo";
-const app = document.createElement("div");
+const app = document.createElement("body");
 
 export default class App {
   constructor($target) {
@@ -18,6 +19,7 @@ export default class App {
 
     render();
     new Header(document.querySelector("#root"));
+    new Modal(document.querySelector("#root"));
     $target.append(app);
   }
 }

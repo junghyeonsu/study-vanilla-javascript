@@ -2,7 +2,7 @@ import HeaderItems from "./HeaderItems.js";
 
 export default class Header {
   constructor($target) {
-    const header = document.createElement("div");
+    const header = document.createElement("header");
     header.style = `
         position: sticky;
         top: 0;

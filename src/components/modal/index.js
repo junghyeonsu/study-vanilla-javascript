@@ -12,8 +12,8 @@ export default class Modal {
     this.$modalContent.className = "modal_content";
     this.$modalContent.innerHTML = "모달입니다.";
 
-    this.$modalOverlay.appendChild(this.$modalContent);
     this.$modalWrapper.appendChild(this.$modalOverlay);
+    this.$modalWrapper.appendChild(this.$modalContent);
     $target.appendChild(this.$modalWrapper);
   }
 

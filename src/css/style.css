@@ -15,6 +15,9 @@
   align-items: center;
 }
 
+/* 이벤트 버블링을 막기위해서 (자식에서 부모의 이벤트까지 추가됨) */
+/* 이벤트 캡처링은 부모에서 자식으로 전파되는 것 */
+/* 버블링을 막기위해서는 부모 자식관계말고 형제로 인식이 되어야 함 */
 .modal_overlay {
   position: absolute;
   display: flex;

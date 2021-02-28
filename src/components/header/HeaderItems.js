@@ -14,6 +14,7 @@ export default class HeaderItems {
 
     new Item($container, "Todo");
     new Item($container, "Grid Card");
+    new Item($container, "Infinite Scroll");
     new Item($container, "Default");
     $target.appendChild($container);
   }

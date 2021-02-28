@@ -3,6 +3,7 @@ import Header from "./components/header/Header.js";
 import Todo from "./components/list/Todo.js";
 import CardContainer from "./components/grid_card/CardContainer.js";
 import Modal from "./components/modal/index.js";
+import InfiniteScroll from "./components/infinite_scroll/index.js";
 
 let state = "Todo";
 const app = document.createElement("body");
@@ -38,6 +39,11 @@ export const render = () => {
     case "Grid Card":
       new Title(app, "Grid Card");
       new CardContainer(app);
+      break;
+
+    case "Infinite Scroll":
+      new Title(app, "Infinite Scroll");
+      new InfiniteScroll(app);
       break;
 
     default:

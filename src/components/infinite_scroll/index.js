@@ -7,6 +7,7 @@ export default class InfiniteScroll {
     this.items.id = "items";
 
     this.sentinel = document.createElement("p");
+    this.sentinel.innerHTML = "얘를 감시해";
     this.sentinel.id = "sentinel";
 
     this.io = new IntersectionObserver((entries) => {

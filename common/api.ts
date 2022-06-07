@@ -8,7 +8,7 @@ const request = async (url: string) => {
     }
     throw new Error(`HTTP 에러: ${response.statusText}`);
   } catch (error) {
-    alert(error.message);
+    throw new Error(error.message);
   }
 };
 
